@@ -1,0 +1,741 @@
+
+.wrapperPage {
+  font-family: "Bona Nova SC", serif;
+  background-color: rgb(249, 241, 232);
+  text-align: center;
+  
+}
+
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 26px;
+}
+p {
+  font-size: 14px;
+}
+.startPage, .wrapperCountdown {
+  background-image: url(../images/pexels-vera-arsic-304265-984908.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  padding: 0;
+}
+.textStartPage {
+  position: absolute;
+  bottom:50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: white;
+  text-align: center;
+  width: 100%;
+  
+  
+}
+.textStartPage h1 {
+  font-size: 13em;
+  margin-bottom: 15px;
+ 
+}
+.textStartPage .marriedNames {
+  font-size: 3em;
+}
+.textStartPage h1 span {
+  border-right: 5px solid white;
+  padding-right: 30px ;
+  margin-right: 30px;
+  
+}
+.mainMargin {
+  margin: 0 20px;
+}
+.notificationWedding {
+  padding: 0 0px 40px 0;
+  
+  
+}
+.appeal {
+ margin-bottom: 40px;
+}
+/* .imageLove {
+  text-align: center;
+} */
+.imageLove img{
+  width: 64px;
+}
+.wrapperTextAppeal{
+  display: flex;
+  justify-content: center;
+  font-size: 1em;
+}
+.textAppeal {
+  text-align: center;
+  /* max-width: 300px; */
+}
+/* .textAppeal p {
+  font-size: 12px;
+} */
+.textAppeal h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.textAppeal h2 {
+  font-size: 26px;
+  border-bottom: 1px solid rgb(108, 70, 49);
+  margin-bottom: 20px;
+  padding-bottom:10px ;
+}
+.calendarGroup {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.month {
+  font-size: 12px;
+  color: rgb(81, 56, 43);
+  margin-bottom: 10px;
+}
+.calendar p {
+  font-size: 16px;
+  
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  max-width: 300px;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.date {
+  position: relative;
+  color: rgb(249, 241, 232);
+}
+.date .ourDate {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.date img {
+  vertical-align: bottom;
+}
+.footerNotification {
+  display: flex;
+  justify-content: center;
+}
+/* .footerNotification p {
+  width: 300px;
+} */
+.photoCouple {
+  margin-bottom: 40px;
+}
+.photoCouple img {
+  width: 100%;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+.cards img {
+  width: 64px;
+  margin-bottom: 10px;
+}
+.cards h2, .cards p {
+  margin-bottom: 20px;
+  max-width: 200px;
+}
+.cards h2 {
+  font-size: 26px;
+}
+.cards p {
+  font-size: 14px;
+}
+.quiz {
+  background-color: rgb(210, 192, 166);
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:80px 0px;
+}
+
+.quiz h3 {
+  padding:  0px 0 40px 0;
+}
+
+.wrapperQuestion {
+  width: 350px;
+  min-width: 34%;
+  /* width: 350px; */
+  display: none;
+  margin-bottom: 20px;
+  
+}
+
+.wrapperQuestion.active {
+  display: block;
+  background-color: rgb(210, 192, 166);
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.question p{
+  font-size: 16px;
+  margin-bottom: 20px;
+  /* margin-right: 20px; */
+ 
+}
+.nameFriends {
+  text-align: start;
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+ 
+}
+.choice input[type=radio] {
+  appearance: none;
+  margin-right: 10px;
+  justify-content: space-between;
+}
+.choice input[type=radio]:checked + label {
+  background-color:  rgb(108, 70, 49);
+  color: antiquewhite;
+}
+.choice label {
+  border: 2px solid rgb(108, 70, 49);
+  padding: 5px;
+  background-color: antiquewhite;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+}
+.guests {
+  margin-bottom: 20px;
+  display: flex;
+}
+.question3, .question5 {
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.choice .checkbox input[type=checkbox]{
+  appearance: none ;
+  z-index: -1;
+}
+
+
+.checkbox  input[type=checkbox] ~ label::before {
+  content: '';
+  color: rgb(108, 70, 49);
+  width: 30px;
+  height: 30px;
+  background-color: antiquewhite;
+  border: 1px solid rgb(108, 70, 49);
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.checkbox  input[type=checkbox]:checked ~ label::before {
+  /* content: '\2713'; */
+  content: '\2714';
+  color: rgb(108, 70, 49);
+  border: 2px inset rgb(108, 70, 49);
+  
+}
+
+
+.wrapperQuestion4 .drinks  {
+  border:none;
+  padding: 5px;
+  background-color: rgb(210, 192, 166);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+}
+.guests.drinkS  {
+  flex-direction: column;
+  align-items: self-start;
+}
+/* .choice4 {
+
+  width: 350px;
+} */
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.checkbox:last-of-type {
+  margin-bottom: 0;
+}
+.guest5 {
+  /* width: 300px; */
+  justify-content: center;
+  
+}
+.question6 {
+  justify-content: center;
+}
+.wrapperQuestion6 input[type=text] {
+  appearance: auto;
+  background-color: antiquewhite;
+  border-radius: 5px;
+  height: 40px;
+  min-width: 350px;
+  border: 1px solid rgb(108, 70, 49);
+  
+}
+.wrapperTiming {
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  margin-bottom: 40px;
+}
+.timingTitle {
+  margin-bottom: 40px;
+}
+.timingOfTheDay {
+  align-self: center;
+  max-width: 350px;
+  text-align: justify;
+}
+.timingTitle img {
+  width: 80px;
+}
+.timing {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 15px;
+}
+.time {
+  border: 1px solid rgb(108, 70, 49);
+  padding: 5px;
+  width: 60px;
+  text-align: center;
+}
+.wrapperGallery {
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+  
+}
+.dots {
+  margin-bottom: 40px;
+}
+/* .dressCode {
+  padding: 40px 0;
+} */
+.w-palette__plate img {
+  width: 70px;
+}
+.wrapperCountdown {
+  background-image: url(../images/pexels-vera-arsic-304265-984920.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  color: antiquewhite;
+  margin-bottom: 80px;
+}
+.wrapperCountdown h1 {
+  font-size: 45px;
+}
+/* .wrapperCountdown p {
+  font-size: 45px;
+} */
+.countdownBlock {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  
+}
+
+.addToMessenger {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+
+}
+.addToMessenger .avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.addToMessenger .info {
+  width: 300px;
+  text-align: center;
+}
+
+.addToMessenger button  img {
+  width: 20px;
+  height: 20px;
+}
+.telegram {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footerPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding-bottom: 20px;
+}
+.footerPage img {
+  width: 14px;
+}
+.footerPage p {
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+.mySlides {
+  display: none;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.arrowsSlides {
+  display: flex;
+  justify-content: space-between;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numberSlide {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}  
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.w-palette__plate {
+  display: flex;
+  justify-content: center;
+}
+.w-palette__item {
+  height: 150px;
+  width: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button {
+  background-color: rgb(210, 192, 166);
+  border: 1px solid rgb(109, 69, 44);
+  width: 150px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 12px;
+
+}
+button p, button img {
+  border: 1px solid rgb(109, 69, 44);
+  transform: translate(-19px, -22px);
+  padding: 11px;
+  border-radius: 5px;
+  width: 150px;
+  transition: transform 200ms ease-in,
+              background-color 200ms ease-in,
+              color 200ms ease-in;
+}
+button img {
+  border: none;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  transform: translate(0, 0);
+}
+
+button p:hover {
+  cursor: pointer;
+  transform: translate(-11px, -11px);
+  padding: 11px;
+  background-color: rgb(151, 140, 126);
+  color: white;
+}
+
+
+
+@media (max-width: 400px) {
+
+  .textStartPage {
+    font-size: 0.6em;
+  }
+}
+@media (max-width: 480px) {
+
+  .textStartPage {
+    font-size: 0.7em;
+  }
+}
+@media (max-width: 620px) {
+
+  .textStartPage {
+    font-size: 0.8em;
+  }
+ 
+}
+
+
+
+@media (min-width:700px) {
+  .startPage {
+    margin-bottom: 0px;
+  }
+  .notificationWedding {
+    padding: 60px 0;
+  }
+  .imageLove img {
+    width: 80px;
+  }
+  .eventPlace {
+    padding: 30px 0;
+  }
+  .quiz { 
+    margin-bottom: 60px;
+  }
+  .wrapperTiming {
+    margin-bottom: 60px;
+  }
+  .calendar {
+    max-width:  350px;
+    gap: 18px;
+  }
+  .calendar p {
+    font-size: 1.1rem;
+    
+    
+  }
+  .month {
+    font-size: 0.9rem;
+  }
+  .cards h2 {
+    font-size: 1.6rem;
+  }
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .wrapperCountdown h1 {
+    font-size: 4rem;
+  } 
+  .wrapperCountdown p {
+    font-size: 1.1rem;
+  } 
+  .addToMessenger .avatar {
+    width: 175px;
+    height: 175px;
+  }
+}
+
+@media (min-width:900px) {
+ 
+  .calendar  {
+    gap: 25px;
+    max-width: 400px;
+  }
+  .appeal {
+    margin-bottom: 60px;
+  }
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+  }
+  .cards h2 {
+    font-size: 2rem;
+  }
+  .startPage, .photoCouple, .eventPlace {
+    margin-bottom: 80px;
+  }
+  .notificationWedding {
+    padding-bottom: 80px;
+  }
+
+  .cards img, .imageLove img {
+    width: 100px;
+  }
+  .quiz {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 80px;
+    margin-bottom: 80px;
+  }
+  .wrapperTiming {
+    margin-bottom: 80px;
+  }
+  .timingTitle h1 {
+    font-size: 3rem;
+  }
+  .wrapperTiming h3 {
+    font-size: 1.1rem;
+  }
+  .wrapperCountdown h1 {
+    font-size: 6rem;
+  } 
+  .wrapperCountdown p {
+    font-size: 1.2rem;
+  } 
+  .notificationWedding h3{
+    font-size: 1.5rem;
+  }
+  .notificationWedding h2 {
+    font-size: 2rem;
+  }
+  .notificationWedding p {
+    font-size: 1rem;
+  }
+  .calendar p {
+    font-size: 1.2rem;
+  }
+  .cards p{
+    font-size: 1rem;
+  }
+ 
+  .dressCode {
+    margin-bottom: 80px;
+  }
+  .dressCode h1 {
+    font-size: 3em;
+  }
+  .dressCode p {
+    font-size: 1.1em;
+  }
+  .dots {
+    margin-bottom: 80px;
+  }
+  .w-palette__plate {
+    margin: 40px 0;
+  }
+  .w-palette__plate img {
+    width: 80px;
+  }
+  .addToMessenger .avatar {
+    width: 300px;
+    height: 300px;
+  }
+  .addToMessenger {
+    padding-top: 80px;
+  }
+}
+
