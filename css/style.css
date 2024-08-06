@@ -262,7 +262,6 @@ p {
 }
 
 .checkbox  input[type=checkbox]:checked ~ label::before {
-  /* content: '\2713'; */
   content: '\2714';
   color: rgb(108, 70, 49);
   border: 2px inset rgb(108, 70, 49);
@@ -283,10 +282,7 @@ p {
   flex-direction: column;
   align-items: self-start;
 }
-/* .choice4 {
 
-  width: 350px;
-} */
 .checkbox {
   display: flex;
   align-items: center;
