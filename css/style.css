@@ -186,7 +186,6 @@ p {
 .wrapperQuestion {
   width: 350px;
   min-width: 34%;
-  /* width: 350px; */
   display: none;
   margin-bottom: 20px;
   
@@ -204,8 +203,6 @@ p {
 .question p{
   font-size: 16px;
   margin-bottom: 20px;
-  /* margin-right: 20px; */
- 
 }
 .nameFriends {
   text-align: start;
