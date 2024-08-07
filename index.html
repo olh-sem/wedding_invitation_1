@@ -355,11 +355,12 @@
           <img src="mask3.svg" width="90" height="281" alt="">
         </div>
       </div>
-
     </div>
 
+
+
     <div class="wrapperCountdown">
-      <div class="countdownBlock">
+      <!-- <div class="countdownBlock">
         <div class="timer days">
           <h1>35</h1>
           <p>днів</p>
@@ -379,9 +380,38 @@
       </div>
       <div>
         <p class="timeToMarried">...і ми будемо одружені!</p>
+      </div> -->
+      <div class="timerBlock">
+        <div class="timer" id="days">
+          <ul>
+            <li>00</li>
+            <li>днів</li>
+          </ul>
+        </div>
+        <div class="timer" id="hours">
+          <ul>
+            <li>00</li>
+            <li>годин</li>
+          </ul>
+        </div>
+        <div class="timer" id="mins">
+          <ul>
+            <li>00</li>
+            <li>хвилин</li>
+          </ul>
+        </div>
+        <div class="timer" id="seconds">
+          <ul>
+            <li>00</li>
+            <li>секунд</li>
+          </ul>
+        </div>
       </div>
     </div>
       
+
+
+
     <div class="mainMargin">
       <div class="addToMessenger">
         <img class="avatar" src="images/pexels-vera-arsic-304265-984926.jpg" alt="">
@@ -407,71 +437,8 @@
   </div>
 
 
-  <script>
-    var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-
-// Unix timestamp (in seconds) to count down to
-var twoDaysFromNow = (new Date().getTime() / 1000) + (86400 * 2) + 1;
-
-// Set up FlipDown
-var flipdown = new FlipDown(twoDaysFromNow)
-
-  // Start the countdown
-  .start()
-
-  // Do something when the countdown ends
-  .ifEnded(() => {
-    console.log('The countdown has ended!');
-  });
-
-// Toggle theme
-var interval = setInterval(() => {
-  let body = document.body;
-  body.classList.toggle('light-theme');
-  body.querySelector('#flipdown').classList.toggle('flipdown__theme-dark');
-  body.querySelector('#flipdown').classList.toggle('flipdown__theme-light');
-}, 5000);
-
-var ver = document.getElementById('ver');
-ver.innerHTML = flipdown.version;
-});
-
-
-
-
+  <script src="./js/index.js">
+   
 
 
 
