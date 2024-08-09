@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <title>Wedding invitation</title>
 </head>
 <body>
@@ -36,51 +37,58 @@
           </div>
          
         </div>
-        <div class="calendarGroup">
-          <p class="month">Жовтень 2024</p>
-          <div class="calendar">
-            <p>Пн</p>
-            <p>Вт</p>
-            <p>Ср</p>
-            <p>Чт</p>
-            <p>Пт</p>
-            <p>Сб</p>
-            <p>Нд</p>
-            <p></p>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <div class="date">
-              <img src="images/love.png" alt="">
-              <p class="ourDate">5</p>
+        <!-- <div class="calendarGroup">
+          <div class="wrapperCalendar">
+            <div class="headerCalendar">
+              <button id="prevBtn">
+                <span class="material-symbols-outlined">
+                  chevron_left
+                  </span>
+              </button>
+              <div class="monthYear" id="monthYear"></div>
+              <button id="nextBtn">
+                <span class="material-symbols-outlined">
+                  chevron_right
+                  </span>
+              </button>
             </div>
-            <p>6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p>
-            <p>10</p>
-            <p>11</p>
-            <p>12</p>
-            <p>13</p>
-            <p>14</p>
-            <p>15</p>
-            <p>16</p>
-            <p>17</p>
-            <p>18</p>
-            <p>19</p>
-            <p>20</p>
-            <p>21</p>
-            <p>22</p>
-            <p>23</p>
-            <p>24</p>
-            <p>25</p>
-            <p>26</p>
-            <p>27</p>
-            <p>28</p>
-            <p>29</p>
-            <p>30</p>
-            <p>31</p>
+            <div class="days">
+              <div class="day">Пн</div>
+              <div class="day">Вт</div>
+              <div class="day">Ср</div>
+              <div class="day">Чт</div>
+              <div class="day">Пт</div>
+              <div class="day">Сб</div>
+              <div class="day">Нд</div>
+            </div>
+            <div class="dates" id="dates">
+            </div>
+          </div>
+        </div> -->
+        <div class="wrapperCalendar">
+          <div class="headerCalendar">
+            <button id="prevBtn">
+              <span class="material-symbols-outlined">
+                chevron_left
+                </span>
+            </button>
+            <div class="monthYear" id="monthYear"></div>
+            <button id="nextBtn">
+              <span class="material-symbols-outlined">
+                chevron_right
+                </span>
+            </button>
+          </div>
+          <div class="days">
+            <div class="day">Пн</div>
+            <div class="day">Вт</div>
+            <div class="day">Ср</div>
+            <div class="day">Чт</div>
+            <div class="day">Пт</div>
+            <div class="day">Сб</div>
+            <div class="day">Нд</div>
+          </div>
+          <div class="dates" id="dates">
           </div>
         </div>
         <div class="footerNotification">
@@ -248,13 +256,13 @@
 
       <div class=" wrapperQuestion active wrapperQuestion6">
         <h3>
-          ЧИ ПОТРІБЕН ТРАНСФЕР
-ДО МІСЦЯ СВЯТКУВАННЯ?
+          Будь ласка, зазначте ваші
+особливості нижче:
         </h3>
         <div class="question question6">
          <div class="choice choice6">
             <div class="guests guest6">
-              <input type="text">
+              <input type="text" >
             </div>
          </div>
         </div>
@@ -355,11 +363,12 @@
           <img src="mask3.svg" width="90" height="281" alt="">
         </div>
       </div>
-
     </div>
 
+
+
     <div class="wrapperCountdown">
-      <div class="countdownBlock">
+      <!-- <div class="countdownBlock">
         <div class="timer days">
           <h1>35</h1>
           <p>днів</p>
@@ -379,9 +388,38 @@
       </div>
       <div>
         <p class="timeToMarried">...і ми будемо одружені!</p>
+      </div> -->
+      <div class="timerBlock">
+        <div class="timer" id="days">
+          <ul>
+            <li>00</li>
+            <li>днів</li>
+          </ul>
+        </div>
+        <div class="timer" id="hours">
+          <ul>
+            <li>00</li>
+            <li>годин</li>
+          </ul>
+        </div>
+        <div class="timer" id="mins">
+          <ul>
+            <li>00</li>
+            <li>хвилин</li>
+          </ul>
+        </div>
+        <div class="timer" id="seconds">
+          <ul>
+            <li>00</li>
+            <li>секунд</li>
+          </ul>
+        </div>
       </div>
     </div>
       
+
+
+
     <div class="mainMargin">
       <div class="addToMessenger">
         <img class="avatar" src="images/pexels-vera-arsic-304265-984926.jpg" alt="">
@@ -407,71 +445,8 @@
   </div>
 
 
-  <script>
-    var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-
-// Unix timestamp (in seconds) to count down to
-var twoDaysFromNow = (new Date().getTime() / 1000) + (86400 * 2) + 1;
-
-// Set up FlipDown
-var flipdown = new FlipDown(twoDaysFromNow)
-
-  // Start the countdown
-  .start()
-
-  // Do something when the countdown ends
-  .ifEnded(() => {
-    console.log('The countdown has ended!');
-  });
-
-// Toggle theme
-var interval = setInterval(() => {
-  let body = document.body;
-  body.classList.toggle('light-theme');
-  body.querySelector('#flipdown').classList.toggle('flipdown__theme-dark');
-  body.querySelector('#flipdown').classList.toggle('flipdown__theme-light');
-}, 5000);
-
-var ver = document.getElementById('ver');
-ver.innerHTML = flipdown.version;
-});
-
-
-
-
+  <script src="./js/index.js">
+   
 
 
 
