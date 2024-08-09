@@ -56,7 +56,9 @@ p {
 }
 .notificationWedding {
   padding: 0 0px 40px 0;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
 }
 .appeal {
@@ -90,7 +92,7 @@ p {
   margin-bottom: 20px;
   padding-bottom:10px ;
 }
-.calendarGroup {
+/* .calendarGroup {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -113,13 +115,96 @@ p {
   gap: 15px;
   align-items: center;
   justify-content: center;
+} */
+.calendarGroup {
+  width: 960px;
 }
-
-.date {
+.wrapperCalendar {
+  min-width: 350px;
+  border-radius: 10px;
+  /* box-shadow: 0 0 10px rgb(138, 138, 138); */
+  /* border: 1px solid rgb(214, 214, 214); */
+  padding: 25px 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 100vh;
+  margin-bottom: 40px;
+}
+.headerCalendar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.monthYear {
+  text-transform:uppercase;
+  font-weight: 400;
+}
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(64, 64, 64);
+}
+.day {
+  padding: 10px 0;
+  text-align: center;
+}
+.headerCalendar button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* border: 1px solid aliceblue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color:rgb(249, 241, 232);
+  transition: box-shadow 200ms ease-in;
+}
+.headerCalendar button:hover {
+  box-shadow: 0 0 5px gray;
+  
+}
+.dates {
+ display: grid;
+ grid-template-columns: repeat(7, 1fr);
+ gap: 5px;
+ justify-items: center;
+}
+.wrapperCalendar .date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 400;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  transition: 200ms ease-in;
+  font-size: 18px;
+}
+.date:hover, .date.active {
+  background-color: rgb(139, 16, 16);
+  color: aliceblue;
+}
+.date.inactive {
+  color: rgb(129, 129, 129);
+  transition: 200ms ease-in;
+}
+.date.inactive:hover {
+  background-color: rgba(88, 88, 88, 0.5);
+  color: black;
+}
+/* .date {
   position: relative;
   color: rgb(249, 241, 232);
-}
-.date .ourDate {
+} */
+/* .date .ourDate {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -128,7 +213,7 @@ p {
 }
 .date img {
   vertical-align: bottom;
-}
+} */
 .footerNotification {
   display: flex;
   justify-content: center;
@@ -658,7 +743,7 @@ button p:hover {
   .wrapperTiming {
     margin-bottom: 60px;
   }
-  .calendar {
+  /* .calendar {
     max-width:  350px;
     gap: 18px;
   }
@@ -669,6 +754,16 @@ button p:hover {
   }
   .month {
     font-size: 0.9rem;
+  } */
+  .wrapperCalendar {
+    width: 450px;
+    gap: 15px;
+  }
+  .dates, .days{
+    gap: 10px;
+  }
+  .wrapperCalendar .date {
+    font-size: 20px;
   }
   .cards h2 {
     font-size: 1.6rem;
@@ -775,9 +870,9 @@ button p:hover {
   .notificationWedding p {
     font-size: 1rem;
   }
-  .calendar p {
+  /* .calendar p {
     font-size: 1.2rem;
-  }
+  } */
   .cards p{
     font-size: 1rem;
   }

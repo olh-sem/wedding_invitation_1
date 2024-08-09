@@ -61,6 +61,9 @@ ver.innerHTML = flipdown.version;
 
 
 
+
+
+
 let timer;
 let compareDate = new Date('2024-10-05T12:00:00.000+02:00'); 
 // compareDate.setDate(compareDate.getDate() + 5);
@@ -97,3 +100,62 @@ function timeBetweenDates(toDate){
   }
   
 }
+
+
+
+
+
+const monthYearElement = document.getElementById('monthYear');
+const datesElement = document.getElementById('dates');
+const prevBtnElement = document.getElementById('prevBtn');
+const nextBtnElement = document.getElementById('nextBtn');
+
+let currentDate = new Date('2024-10-05');
+
+
+const updateCalendar = () => {
+  const currentYear = currentDate.getFullYear();
+  const currentMonth = currentDate.getMonth();
+
+  const firstDay = new Date(currentYear, currentMonth, 0);
+  const lastDay = new Date(currentYear,currentMonth + 1, 0);
+  const totalDays = lastDay.getDate();
+  const firstDayIndex = firstDay.getDay();
+  const lastDayIndex = lastDay.getDay();
+ 
+  const monthYearString = currentDate.toLocaleString('default', {month: 'long', year: 'numeric'});
+  monthYearElement.textContent = monthYearString.slice(0, -2);
+
+  let datesHTML = '';
+
+  for (let i = firstDayIndex; i > 0; i--){
+    const prevDate = new Date(currentYear, currentMonth, 0 - i + 1);
+    datesHTML += `<div class="date inactive">${prevDate.getDate()}</div>`;
+  }
+
+  for (let i = 1; i <= totalDays; i++) {
+    const date = new Date(currentYear, currentMonth, i);
+    const activeClass = date.toDateString() === new Date('2024-10-05').toDateString() ? 'active' : '';
+    datesHTML += `<div class="date ${activeClass}">${i}</div>`;
+  }
+
+  for (let i = 1; i<=7 - lastDayIndex; i++) {
+    const nextDate = new Date(currentYear, currentMonth + 1, i);
+    datesHTML += `<div class="date inactive">${nextDate.getDate()}</div>`;
+  }
+
+  datesElement.innerHTML = datesHTML;
+}
+
+prevBtn.addEventListener('click', () => {
+  currentDate.setMonth(currentDate.getMonth() - 1);
+  updateCalendar();
+})
+
+nextBtn.addEventListener('click', () => {
+  currentDate.setMonth(currentDate.getMonth() + 1);
+  updateCalendar();
+})
+
+updateCalendar();
+
