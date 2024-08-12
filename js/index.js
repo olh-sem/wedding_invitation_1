@@ -28,42 +28,6 @@ function showSlides(n) {
 }
 
 
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-
-// Unix timestamp (in seconds) to count down to
-var twoDaysFromNow = (new Date().getTime() / 1000) + (86400 * 2) + 1;
-
-// Set up FlipDown
-var flipdown = new FlipDown(twoDaysFromNow)
-
-  // Start the countdown
-  .start()
-
-  // Do something when the countdown ends
-  .ifEnded(() => {
-    console.log('The countdown has ended!');
-  });
-
-// Toggle theme
-var interval = setInterval(() => {
-  let body = document.body;
-  body.classList.toggle('light-theme');
-  body.querySelector('#flipdown').classList.toggle('flipdown__theme-dark');
-  body.querySelector('#flipdown').classList.toggle('flipdown__theme-light');
-}, 5000);
-
-var ver = document.getElementById('ver');
-ver.innerHTML = flipdown.version;
-});
-
-
-
-
-
-
 let timer;
 let compareDate = new Date('2024-10-05T12:00:00.000+02:00'); 
 // compareDate.setDate(compareDate.getDate() + 5);
@@ -158,4 +122,20 @@ nextBtn.addEventListener('click', () => {
 })
 
 updateCalendar();
+
+
+
+
+let form = document.getElementsByClassName('quiz')[0];
+
+form.onchange = (e) => {
+  console.log('change', e);
+  console.log(new FormData(form));
+}
+
+
+
+
+
+
 

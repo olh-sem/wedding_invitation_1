@@ -188,9 +188,16 @@ p {
   transition: 200ms ease-in;
   font-size: 18px;
 }
-.date:hover, .date.active {
+.date:hover {
   background-color: rgb(139, 16, 16);
   color: aliceblue;
+}
+.date.active {
+ color: aliceblue;
+ background-image: url(../images/love.png);
+ background-position: center;
+ background-size: contain;
+ background-color: beige;
 }
 .date.inactive {
   color: rgb(129, 129, 129);
@@ -213,7 +220,7 @@ p {
 } */
 .date img {
   vertical-align: bottom;
-} */
+} 
 .footerNotification {
   display: flex;
   justify-content: center;
@@ -324,8 +331,6 @@ p {
   justify-content: center;
 }
 
-
-
 .choice .checkbox input[type=checkbox]{
   appearance: none ;
   z-index: -1;
@@ -352,8 +357,6 @@ p {
   border: 2px inset rgb(108, 70, 49);
   
 }
-
-
 .wrapperQuestion4 .drinks  {
   border:none;
   padding: 5px;
@@ -438,40 +441,37 @@ p {
 }
 .wrapperCountdown {
   background-image: url(../images/pexels-vera-arsic-304265-984920.jpg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   height: 300px;
   color: antiquewhite;
   margin-bottom: 80px;
+ 
 }
 .wrapperCountdown h1 {
   font-size: 45px;
 }
 
-/* .countdownBlock {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-  
-} */
 
 .timerBlock {
-  /* background-color: grey ; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 2fr 1fr;
+  justify-items: center;
+  align-items: end;
+  /* gap: 10px; */
   height: 300px;
   color:blanchedalmond;
-  padding: 0 20px;
+  padding: 30px;
+  background-color: rgb(45 39 39 / 50%);
+}
+.timeToMarried {
+  grid-row: 2/3;
+  grid-column: 1/5;
+  align-self: center;
 }
 .timerBlock ul li {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 .timerBlock ul li:nth-child(1) {
   font-size: 2rem;
@@ -487,16 +487,11 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(87, 87, 87, 0.6);
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  box-shadow: 0 0 30px  rgb(0, 0, 0);
+  box-shadow: 0 0 150px  rgb(0, 0, 0);
 }
-
-
-
-
 
 .addToMessenger {
   margin-bottom: 80px;
@@ -749,8 +744,6 @@ button p:hover {
   }
   .calendar p {
     font-size: 1.1rem;
-    
-    
   }
   .month {
     font-size: 0.9rem;
@@ -778,9 +771,10 @@ button p:hover {
   .wrapperCountdown p {
     font-size: 1.1rem;
   }  */
-  .timerBlock {
+  
+  /* .timerBlock {
     gap: 20px;
-  }
+  } */
   .timer {
     width: 130px;
     height: 130px;
@@ -848,9 +842,9 @@ button p:hover {
   .wrapperCountdown p {
     font-size: 1.2rem;
   }  */
-  .timerBlock {
+  /* .timerBlock {
     gap: 30px;
-  }
+  } */
   .timer {
     width: 170px;
     height: 170px;
